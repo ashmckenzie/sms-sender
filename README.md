@@ -1,6 +1,6 @@
 # SmsSender
 
-TODO: Write a gem description
+Send SMS's via Twilio, nice and easy.
 
 ## Installation
 
@@ -16,9 +16,18 @@ Or install it yourself as:
 
     $ gem install sms_sender
 
+## Config
+
+    $ cat ~/.sms-sender.yml
+
+    ---
+    sid: <TWILIO_SID>
+    auth_token: <TWILIO_AUTH_TOKEN>
+    caller_id: '<TWILIO_PHONE_CALLER_ID>'
+
 ## Usage
 
-TODO: Write usage instructions here
+    $ sms-sender --target '<phone number including international code>' "<message to send>"
 
 ## Contributing
 
