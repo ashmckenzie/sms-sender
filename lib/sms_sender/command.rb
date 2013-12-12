@@ -2,6 +2,11 @@ module SmsSender
 
   class Command < Clamp::Command
 
+    option "--version", :flag, "show version" do
+      puts "sms-sender #{SmsSender::VERSION}"
+      exit 0
+    end
+
     option '--target', 'NUMBER', 'Phone number target', required: true
     parameter 'message', 'Message content', required: true
 
